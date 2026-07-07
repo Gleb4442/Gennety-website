@@ -197,19 +197,13 @@ function OpenClawIcon({ className }: { className?: string }) {
   );
 }
 
-function FacebookIcon({ className }: { className?: string }) {
+function FolkIcon({ className }: { className?: string }) {
   return (
-    <svg
-      style={{ flex: "none", lineHeight: 1 }}
-      viewBox="0 0 24 24"
+    <img
+      src="/images/agents/folk.png"
       className={className}
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <title>Facebook Agent</title>
-      <rect width="24" height="24" rx="5" fill="#000" />
-      <path d="M15 9h-3V7.5c0-.828.672-1.5 1.5-1.5H15V3h-2.5C9.46 3 7 5.46 7 8.5V9H5v3h2v9h3v-9h4l.5-3z" fill="#fff" />
-    </svg>
+      alt="Folk Agent"
+    />
   );
 }
 
@@ -358,6 +352,21 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-dvh bg-transparent">
+      {/* Telegram Update Banner */}
+      <div className="w-full bg-[#26A4E3] py-2 text-center text-xs text-black select-none">
+        <div className="mx-auto flex max-w-5xl items-center justify-center px-4">
+          <Link href="/telegram-update" className="group inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1 hover:opacity-90 transition-opacity">
+            <span className="inline-flex items-center gap-1 rounded-full bg-black px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-white shadow-[0_0_10px_rgba(0,0,0,0.3)]">
+              Update
+            </span>
+            <span className="font-semibold text-black">{t("telegramUpdate.bannerText")}</span>
+            <span className="font-bold text-black underline-offset-4 group-hover:underline inline-flex items-center gap-0.5">
+              {t("telegramUpdate.readMore")} <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+            </span>
+          </Link>
+        </div>
+      </div>
+
       {/* ── Nav ── */}
       <nav
         className="sticky top-0 z-50 backdrop-blur-xl bg-[#010103]/60 border-b border-[#1a1a1a]"
@@ -475,22 +484,7 @@ export default function LandingPage() {
       >
         <TopBanner />
 
-        {/* Decorative agent icons */}
-        <CodexIcon className="hidden sm:block pointer-events-none absolute left-[8%] top-[20%] w-14 h-14 md:w-16 md:h-16 select-none animate-agent-codex opacity-80" />
-        <OpenClawIcon className="hidden sm:block pointer-events-none absolute right-[10%] top-[15%] w-14 h-14 md:w-16 md:h-16 select-none animate-agent-openclaw opacity-80" />
-        <FacebookIcon className="hidden sm:block pointer-events-none absolute left-[4%] top-[55%] w-12 h-12 md:w-14 md:h-14 select-none animate-agent-facebook opacity-80" />
-        <KimiIcon className="hidden sm:block pointer-events-none absolute right-[5%] top-[50%] w-12 h-12 md:w-14 md:h-14 select-none animate-agent-kimi opacity-80" />
 
-        <div className="hidden sm:flex pointer-events-none absolute left-[15%] bottom-[20%] h-14 w-14 md:h-16 md:w-16 items-center justify-center rounded-full bg-white p-2.5 text-black shadow-sm select-none animate-agent-hermes opacity-80 overflow-hidden">
-          <HermesIcon className="h-full w-full" />
-        </div>
-
-        <ClaudeCodeIcon className="hidden sm:block pointer-events-none absolute right-[18%] bottom-[18%] w-14 h-14 md:w-16 md:h-16 select-none animate-agent-claude text-white opacity-80" />
-
-        <ManusIcon className="hidden sm:block pointer-events-none absolute left-[25%] top-[10%] w-12 h-12 md:w-14 md:h-14 select-none animate-agent-manus text-white opacity-80" />
-
-        <PerplexityIcon className="hidden sm:block pointer-events-none absolute right-[25%] top-[8%] w-12 h-12 md:w-14 md:h-14 select-none animate-agent-perplexity text-white opacity-80" />
-        <CursorIcon className="hidden sm:block pointer-events-none absolute right-[32%] bottom-[15%] w-12 h-12 md:w-14 md:h-14 select-none animate-agent-cursor text-white opacity-80" />
 
 
         <div className="relative mt-7 w-full max-w-2xl text-center">
@@ -525,38 +519,38 @@ export default function LandingPage() {
             </a>
           </div>
 
-          {/* Mobile-only supported agent icons */}
-          <div className="hero-cta mt-12 flex flex-col items-center gap-4 sm:hidden w-full overflow-hidden max-w-[100vw]">
-            <p className="text-[11px] font-semibold uppercase tracking-wider text-neutral-500">
+          {/* Supported agent icons row (Marquee) */}
+          <div className="hero-cta mt-16 sm:mt-20 flex flex-col items-center gap-5 w-full overflow-hidden max-w-[100vw]">
+            <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-neutral-500">
               {t("landing.supportedAgents.title")}
             </p>
-            <div className="relative w-full py-3 overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-10 before:bg-gradient-to-r before:from-[#050505] before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-10 after:bg-gradient-to-l after:from-[#050505] after:to-transparent">
-              <div className="flex w-max animate-marquee items-center gap-8 px-4">
-                <div className="flex items-center gap-8 shrink-0">
-                  <CodexIcon className="h-8 w-8 text-white select-none shrink-0" />
-                  <OpenClawIcon className="h-8 w-8 select-none shrink-0" />
-                  <FacebookIcon className="h-8 w-8 select-none shrink-0" />
-                  <KimiIcon className="h-8 w-8 select-none shrink-0" />
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white p-1.5 text-black shadow-sm select-none overflow-hidden">
+            <div className="relative w-full py-4 overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-20 sm:before:w-32 before:bg-gradient-to-r before:from-[#010103] before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-20 sm:after:w-32 after:bg-gradient-to-l after:from-[#010103] after:to-transparent">
+              <div className="flex w-max animate-marquee items-center">
+                <div className="flex items-center shrink-0">
+                  <CodexIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
+                  <OpenClawIcon className="h-8 w-8 sm:h-10 sm:w-10 select-none shrink-0 mr-12 sm:mr-16" />
+                  <FolkIcon className="h-8 w-8 sm:h-10 sm:w-10 select-none shrink-0 mr-12 sm:mr-16" />
+                  <KimiIcon className="h-8 w-8 sm:h-10 sm:w-10 select-none shrink-0 mr-12 sm:mr-16" />
+                  <div className="flex h-8 w-8 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full bg-white p-1.5 sm:p-2 text-black shadow-sm select-none overflow-hidden mr-12 sm:mr-16">
                     <HermesIcon className="h-full w-full" />
                   </div>
-                  <ClaudeCodeIcon className="h-8 w-8 text-white select-none shrink-0" />
-                  <ManusIcon className="h-8 w-8 text-white select-none shrink-0" />
-                  <PerplexityIcon className="h-8 w-8 text-white select-none shrink-0" />
-                  <CursorIcon className="h-8 w-8 text-white select-none shrink-0" />
+                  <ClaudeCodeIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
+                  <ManusIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
+                  <PerplexityIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
+                  <CursorIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
                 </div>
-                <div className="flex items-center gap-8 shrink-0">
-                  <CodexIcon className="h-8 w-8 text-white select-none shrink-0" />
-                  <OpenClawIcon className="h-8 w-8 select-none shrink-0" />
-                  <FacebookIcon className="h-8 w-8 select-none shrink-0" />
-                  <KimiIcon className="h-8 w-8 select-none shrink-0" />
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white p-1.5 text-black shadow-sm select-none overflow-hidden">
+                <div className="flex items-center shrink-0">
+                  <CodexIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
+                  <OpenClawIcon className="h-8 w-8 sm:h-10 sm:w-10 select-none shrink-0 mr-12 sm:mr-16" />
+                  <FolkIcon className="h-8 w-8 sm:h-10 sm:w-10 select-none shrink-0 mr-12 sm:mr-16" />
+                  <KimiIcon className="h-8 w-8 sm:h-10 sm:w-10 select-none shrink-0 mr-12 sm:mr-16" />
+                  <div className="flex h-8 w-8 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full bg-white p-1.5 sm:p-2 text-black shadow-sm select-none overflow-hidden mr-12 sm:mr-16">
                     <HermesIcon className="h-full w-full" />
                   </div>
-                  <ClaudeCodeIcon className="h-8 w-8 text-white select-none shrink-0" />
-                  <ManusIcon className="h-8 w-8 text-white select-none shrink-0" />
-                  <PerplexityIcon className="h-8 w-8 text-white select-none shrink-0" />
-                  <CursorIcon className="h-8 w-8 text-white select-none shrink-0" />
+                  <ClaudeCodeIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
+                  <ManusIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
+                  <PerplexityIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
+                  <CursorIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
                 </div>
               </div>
             </div>

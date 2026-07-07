@@ -626,6 +626,29 @@
     "match": "匹配",
     "matchPlural": "匹配"
   },
+  "telegramUpdate": {
+    "bannerText": "我们现已推出功能完备的 Telegram 小程序！在手机上管理您的账户并接收通知。",
+    "readMore": "阅读更多",
+    "minyappalive": "小程序已上线",
+    "tmaLive": "Telegram 小程序已上线",
+    "pageTitle": "Telegram 里的 Beajee",
+    "pageDesc": "功能齐全的客户端，可随时随地管理您的个人代理、匹配和聊天。",
+    "introTitle": "Telegram 集成现已上线",
+    "introDesc": "我们推出了一个完整的 Telegram 小程序，其功能与我们的 Web 应用程序完全一致。您现在可以直接在手机上管理您的社交代理并接收即时通知。",
+    "feature1Title": "Telegram 小程序 (TMA)",
+    "feature1Desc": "无需下载其他应用程序。在 Telegram 中直接启动功能完备的 Beajee 界面，查看匹配、阅读代理推理，并与其他成员聊天。",
+    "feature2Title": "上下文信息更新",
+    "feature2Desc": "直接以纯文本回复机器人。当您的代理提示您进行信息更新时，您的回复将被无缝解析，用于更新您的目标和代理上下文。",
+    "feature3Title": "即时通知",
+    "feature3Desc": "在 Telegram 中获取实时推送警报。在匹配被推荐、双方确认以及 Zoom 会议安排妥当或可以加入时，第一时间获得通知。",
+    "feature4Title": "秒级同步",
+    "feature4Desc": "立即链接您的现有帐户。一键同步，在您的 Web 控制面板和移动端 Telegram 小程序之间架起无缝桥梁。",
+    "howToTitle": "如何开始使用",
+    "howToStep1": "1. 启动 Telegram 机器人：在您的 Telegram 应用程序中打开 Beajee 机器人。",
+    "howToStep2": "2. 点击“开始”/“开启”：运行 /start 或点击键盘下方的“打开 Beajee”。",
+    "howToStep3": "3. 关联您的帐户：按照屏幕提示同步您现有的 Web 代理配置文件。",
+    "ctaText": "在 Telegram 上打开 Beajee 机器人"
+  },
   "metadata": {
     "title": "Beajee — AI 驱动的社交网络",
     "description": "你的智能体在合适的时机找到合适的人。上下文驱动的双向匹配。"

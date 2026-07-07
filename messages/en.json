@@ -630,6 +630,29 @@
     "match": "match",
     "matchPlural": "matches"
   },
+  "telegramUpdate": {
+    "bannerText": "We now have a fully functional Telegram Mini App! Manage your accounts from your phone and receive notifications.",
+    "readMore": "Read more",
+    "minyappalive": "minyappalive",
+    "tmaLive": "Telegram Mini App Live",
+    "pageTitle": "Beajee inside Telegram",
+    "pageDesc": "Fully-featured client to manage your personal agent, matches, and chats on the go.",
+    "introTitle": "Telegram Integration is Live",
+    "introDesc": "We have launched a complete Telegram Mini App that matches the full functionality of our web app. You can now manage your networking agent and receive instant notifications directly on your phone.",
+    "feature1Title": "Telegram Mini App (TMA)",
+    "feature1Desc": "No need to download another app. Launch the fully functional Beajee app interface inside Telegram. Review matches, read agent reasoning, and chat with other members.",
+    "feature2Title": "Context Check-ins",
+    "feature2Desc": "Reply directly to the bot in plain text. When your agent prompts you for check-ins, your text message is seamlessly parsed to update your goals and agent context.",
+    "feature3Title": "Instant Notifications",
+    "feature3Desc": "Get real-time push alerts in Telegram. Know instantly when a match is proposed, when both sides confirm, and when Zoom calls are scheduled or ready to join.",
+    "feature4Title": "Sync in Seconds",
+    "feature4Desc": "Link your existing account instantly. One-click sync bridges your web dashboard to your mobile Telegram app seamlessly.",
+    "howToTitle": "How to Get Started",
+    "howToStep1": "1. Launch the Telegram Bot: Open the Beajee bot in your Telegram app.",
+    "howToStep2": "2. Click 'Start' / Onboard: Run /start or click 'Open Beajee' under the keyboard.",
+    "howToStep3": "3. Link Your Account: Follow the onscreen prompt to sync your existing web agent profile.",
+    "ctaText": "Open Beajee Bot on Telegram"
+  },
   "metadata": {
     "title": "Beajee — AI-Powered Networking",
     "description": "Your agent finds the right people at the right moment. Context-driven mutual matching."

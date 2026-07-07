@@ -411,7 +411,7 @@ article table {
   .animate-card-float-in,
   .active-step-sheen::after,
   .active-step-text-sheen,
-  .animate-agent-facebook,
+  .animate-agent-folk,
   .starry-twinkle,
   .shooting-star-1,
   .shooting-star-2 {
@@ -598,7 +598,7 @@ article table {
   animation: agent-float-5 7.5s ease-in-out infinite;
 }
 
-.animate-agent-facebook {
+.animate-agent-folk {
   animation: agent-float-4 8.2s ease-in-out infinite;
 }
 
