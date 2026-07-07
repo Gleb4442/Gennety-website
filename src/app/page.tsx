@@ -309,6 +309,39 @@ function PerplexityIcon({ className }: { className?: string }) {
   );
 }
 
+function MarqueeIconsRow() {
+  return (
+    <div className="flex w-max animate-marquee items-center">
+      <div className="flex items-center shrink-0">
+        <CodexIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
+        <OpenClawIcon className="h-8 w-8 sm:h-10 sm:w-10 select-none shrink-0 mr-12 sm:mr-16" />
+        <FolkIcon className="h-8 w-8 sm:h-10 sm:w-10 select-none shrink-0 mr-12 sm:mr-16" />
+        <KimiIcon className="h-8 w-8 sm:h-10 sm:w-10 select-none shrink-0 mr-12 sm:mr-16" />
+        <div className="flex h-8 w-8 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full bg-white p-1.5 sm:p-2 text-black shadow-sm select-none overflow-hidden mr-12 sm:mr-16">
+          <HermesIcon className="h-full w-full" />
+        </div>
+        <ClaudeCodeIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
+        <ManusIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
+        <PerplexityIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
+        <CursorIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
+      </div>
+      <div className="flex items-center shrink-0">
+        <CodexIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
+        <OpenClawIcon className="h-8 w-8 sm:h-10 sm:w-10 select-none shrink-0 mr-12 sm:mr-16" />
+        <FolkIcon className="h-8 w-8 sm:h-10 sm:w-10 select-none shrink-0 mr-12 sm:mr-16" />
+        <KimiIcon className="h-8 w-8 sm:h-10 sm:w-10 select-none shrink-0 mr-12 sm:mr-16" />
+        <div className="flex h-8 w-8 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full bg-white p-1.5 sm:p-2 text-black shadow-sm select-none overflow-hidden mr-12 sm:mr-16">
+          <HermesIcon className="h-full w-full" />
+        </div>
+        <ClaudeCodeIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
+        <ManusIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
+        <PerplexityIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
+        <CursorIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
+      </div>
+    </div>
+  );
+}
+
 export default function LandingPage() {
   const t = useTranslations();
   const howRef = useReveal();
@@ -477,88 +510,85 @@ export default function LandingPage() {
         </span>
       </Link>
 
-      {/* ── Hero ── */}
-      <section
-        className="relative flex min-h-[74dvh] flex-col items-center justify-center px-4 py-10 sm:px-6 overflow-hidden"
-        style={{ background: "radial-gradient(ellipse at center, rgba(255,255,255,0.02) 0%, transparent 70%)" }}
-      >
-        <TopBanner />
+      {/* ── Hero & Our Thesis Background Wrapper ── */}
+      <div className="relative w-full" style={{ clipPath: "inset(0)" }}>
+        {/* Fixed Background Image Container */}
+        <div className="fixed inset-0 -z-10 pointer-events-none w-full h-full">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ 
+              backgroundImage: "url('/images/starry-night.jpg')",
+            }}
+          />
+          {/* Dark premium overlay to blend with the dark page design and maintain readability */}
+          <div className="absolute inset-0 bg-[#010103]/75" />
+        </div>
+
+        {/* ── Hero ── */}
+        <section
+          className="relative flex min-h-[74dvh] flex-col items-center justify-center px-4 py-10 sm:px-6 overflow-hidden z-10"
+          style={{ background: "radial-gradient(ellipse at center, rgba(255,255,255,0.02) 0%, transparent 70%)" }}
+        >
+          <TopBanner />
 
 
 
 
-        <div className="relative mt-7 w-full max-w-2xl text-center">
-          <h1 className="hero-title text-[2.5rem] font-semibold leading-[1.12] text-white sm:text-5xl md:text-6xl">
-            {t("landing.heroTitle1")}
-            <br />
-            {t("landing.heroTitle2")}
-          </h1>
-          <p className="hero-subtitle mx-auto mt-5 max-w-xl text-base leading-7 text-neutral-400">
-            {t("landing.heroSubtitle")}
-          </p>
-          <div className="hero-cta mt-7">
-            <a
-              href={`${appUrl}/login`}
-              className={cx(primaryButtonClass, "group gap-2 rounded-full px-6")}
-            >
-              <span>{t("common.getStarted")}</span>
-              <svg
-                aria-hidden="true"
-                viewBox="0 0 16 16"
-                className="h-3.5 w-3.5 shrink-0 transition-transform duration-300 group-hover:translate-x-0.5"
-              >
-                <path
-                  d="M3.5 8h8m0 0-3-3m3 3-3 3"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.5"
-                />
-              </svg>
-            </a>
-          </div>
-
-          {/* Supported agent icons row (Marquee) */}
-          <div className="hero-cta mt-16 sm:mt-20 flex flex-col items-center gap-5 w-full overflow-hidden max-w-[100vw]">
-            <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-neutral-500">
-              {t("landing.supportedAgents.title")}
+          <div className="relative mt-7 w-full max-w-2xl text-center">
+            <h1 className="hero-title text-[2.5rem] font-semibold leading-[1.12] text-white sm:text-5xl md:text-6xl">
+              {t("landing.heroTitle1")}
+              <br />
+              {t("landing.heroTitle2")}
+            </h1>
+            <p className="hero-subtitle mx-auto mt-5 max-w-xl text-base leading-7 text-neutral-400">
+              {t("landing.heroSubtitle")}
             </p>
-            <div className="relative w-full py-4 overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-20 sm:before:w-32 before:bg-gradient-to-r before:from-[#010103] before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-20 sm:after:w-32 after:bg-gradient-to-l after:from-[#010103] after:to-transparent">
-              <div className="flex w-max animate-marquee items-center">
-                <div className="flex items-center shrink-0">
-                  <CodexIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
-                  <OpenClawIcon className="h-8 w-8 sm:h-10 sm:w-10 select-none shrink-0 mr-12 sm:mr-16" />
-                  <FolkIcon className="h-8 w-8 sm:h-10 sm:w-10 select-none shrink-0 mr-12 sm:mr-16" />
-                  <KimiIcon className="h-8 w-8 sm:h-10 sm:w-10 select-none shrink-0 mr-12 sm:mr-16" />
-                  <div className="flex h-8 w-8 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full bg-white p-1.5 sm:p-2 text-black shadow-sm select-none overflow-hidden mr-12 sm:mr-16">
-                    <HermesIcon className="h-full w-full" />
-                  </div>
-                  <ClaudeCodeIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
-                  <ManusIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
-                  <PerplexityIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
-                  <CursorIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
-                </div>
-                <div className="flex items-center shrink-0">
-                  <CodexIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
-                  <OpenClawIcon className="h-8 w-8 sm:h-10 sm:w-10 select-none shrink-0 mr-12 sm:mr-16" />
-                  <FolkIcon className="h-8 w-8 sm:h-10 sm:w-10 select-none shrink-0 mr-12 sm:mr-16" />
-                  <KimiIcon className="h-8 w-8 sm:h-10 sm:w-10 select-none shrink-0 mr-12 sm:mr-16" />
-                  <div className="flex h-8 w-8 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full bg-white p-1.5 sm:p-2 text-black shadow-sm select-none overflow-hidden mr-12 sm:mr-16">
-                    <HermesIcon className="h-full w-full" />
-                  </div>
-                  <ClaudeCodeIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
-                  <ManusIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
-                  <PerplexityIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
-                  <CursorIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white select-none shrink-0 mr-12 sm:mr-16" />
-                </div>
+            <div className="hero-cta mt-7">
+              <a
+                href={`${appUrl}/login`}
+                className={cx(primaryButtonClass, "group gap-2 rounded-full px-6")}
+              >
+                <span>{t("common.getStarted")}</span>
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 16 16"
+                  className="h-3.5 w-3.5 shrink-0 transition-transform duration-300 group-hover:translate-x-0.5"
+                >
+                  <path
+                    d="M3.5 8h8m0 0-3-3m3 3-3 3"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            {/* Supported agent icons row (Marquee) */}
+            <div className="hero-cta mt-16 sm:mt-20 flex flex-col items-center gap-5 w-full overflow-hidden max-w-[100vw]">
+              <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-neutral-500">
+                {t("landing.supportedAgents.title")}
+              </p>
+              <div 
+                className="relative w-full py-4 overflow-hidden"
+                style={{
+                  maskImage: "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+                  WebkitMaskImage: "linear-gradient(to right, transparent, black 15%, black 85%, transparent)"
+                }}
+              >
+                <MarqueeIconsRow />
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <GranovetterSection />
+        {/* ── Our Thesis ── */}
+        <div className="relative z-10">
+          <GranovetterSection />
+        </div>
+      </div>
 
       <ProblemSection />
 
