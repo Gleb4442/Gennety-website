@@ -780,14 +780,6 @@ export default function LandingPage() {
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-0">
           <span className="text-sm text-neutral-500">{t("common.beajee")}</span>
           <div className="flex items-center gap-4 flex-wrap justify-center">
-            <a
-              href={githubRepoUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="text-sm text-neutral-500 transition-colors hover:text-white"
-            >
-              {t("landing.githubLinkLabel")}
-            </a>
             <CookiePreferencesButton />
             <span className="text-sm text-neutral-500">{t("common.builtForAgents")}</span>
           </div>
