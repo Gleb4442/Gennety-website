@@ -62,7 +62,7 @@ export function ProblemSection() {
   ];
 
   return (
-    <section className="mx-auto max-w-5xl space-y-20 px-4 py-16 sm:px-6 sm:py-24">
+    <section className="mx-auto max-w-5xl space-y-32 px-4 py-16 sm:px-6 sm:py-24">
       {/* Block 1: Problem */}
       <div className="flex flex-col md:flex-row gap-12 md:gap-20 items-center">
         <div className="flex-1 space-y-8">
